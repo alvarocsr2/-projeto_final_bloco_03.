@@ -8,15 +8,22 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
-        <div className="min-h-[80vh]">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
+					<Navbar />
+					<div className="min-h-[80vh]">
+						<Routes>
+							<Route path="/home" element={<Home />} />
+							<Route path="/temas" element={<ListaCategoria />} />
+							<Route path="/cadastrartema" element={<FormCategoria />} />
+							<Route path="/editartema/:id" element={<FormCategoria />} />
+							<Route path="/deletartema/:id" element={<DeletarCategoria />} />
+							<Route path="/postagens" element={<ListaProdutos />} />
+							<Route path="/cadastrarpostagem" element={<FormProdutos />} />
+							<Route path="/editarpostagem/:id" element={<FormProdutos />} />
+							<Route path="/deletarpostagem/:id" element={<DeletarProdutos />} />
+						</Routes>
+					</div>
+					<Footer />
+				</BrowserRouter>
     </>
   )
 }
